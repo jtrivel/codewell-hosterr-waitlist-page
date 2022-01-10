@@ -1,0 +1,122 @@
+@use '../base/variables'as v;
+@use '../base/mixins'as m;
+
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+
+  &__logo {
+    display: flex;
+    align-items: flex-star;
+    gap: 2rem;
+  }
+
+  &__btn {
+    text-decoration: none;
+    color: v.$white;
+    padding: .5rem 2rem;
+    background: linear-gradient(90deg, v.$gradient1, v.$gradient2);
+    border-radius: 69rem;
+    white-space: nowrap;
+    &-r {
+      padding: 1.5rem 3rem;
+      background: v.$btnBg;
+      border-radius: .5rem;
+      @include m.desktop { 
+        font-size: 2rem;
+      }
+    }
+  }
+
+  #check {
+    display: none;
+  }
+
+  #check:checked ~ &__menu {
+    transform: scale(1);
+  }
+
+  #check:checked ~ &__menu &__li {
+    display: block;
+  }
+
+
+  &__icon {
+    font-size: 3rem;
+    cursor: pointer;
+    @include m.desktop { 
+      display: none;
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    top: 10rem;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(234, 172, 84, 0.692);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-inline: auto;
+    max-width: 140rem;
+    width: 95%;
+    transform: scale(0);
+    transition: all 250ms ease;
+    z-index: 69;
+    @include m.desktop { 
+      position: relative;
+      transform: scale(1);
+      background: transparent;
+      top: auto;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &__menu &__li {
+    display: none;
+    @include m.desktop { 
+      display: block;
+    }
+  }
+
+  &__bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    @include m.desktop { 
+      flex-direction: row;
+    }
+  }
+
+
+  &__link {
+    text-decoration: none;
+    color: v.$primaryColor;
+    @include m.desktop { 
+      font-size: 2rem;
+    }
+  }
+
+  &__right {
+    display: none;
+    @include m.desktop { 
+      display: block;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+
+}
+
