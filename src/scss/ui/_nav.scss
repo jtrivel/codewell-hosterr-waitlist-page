@@ -104,7 +104,37 @@
     text-decoration: none;
     color: v.$primaryColor;
     @include m.desktop { 
+      position: relative;
       font-size: 2rem;
+      &::before{
+        position: absolute;
+        content: "";
+        border-top: 2px solid v.$gradient1;
+        border-left: 2px solid v.$gradient1;
+        width: 8px;
+        height: 8px;
+        left: -5%;
+        top: 0%;
+        opacity: 0;
+        transition: all 250ms ease;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        border-bottom: 2px solid v.$gradient1;
+        border-right: 2px solid v.$gradient1;
+        width: 8px;
+        height: 8px;
+        right: -5%;
+        bottom: 0%;
+        opacity: 0;
+        transition: all 250ms ease;
+      }
+    }
+    &:hover::before,
+    &:hover:after {
+      opacity: 1;
+      transform: scale(1.6);
     }
   }
 

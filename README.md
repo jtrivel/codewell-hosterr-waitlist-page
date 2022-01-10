@@ -18,7 +18,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution URL](https://www.codewell.cc/challenges/meeet-waitlist-template--60e05defa383e41090a3c273/solution/61db4e056da8ba3fac6b0141)
-- Live Site URL: [Live Site URL](https://codewell-meet-template-challenge.netlify.app/)
+- Live Site URL: [Live Site URL](https://codewell-hosterr-waitlist-page-challenge.netlify.app/)
 
 ### Built with
 - SASS

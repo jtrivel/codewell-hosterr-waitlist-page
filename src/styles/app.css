@@ -373,8 +373,37 @@ h2 {
 }
 @media (min-width: 1024px) {
   .nav__link {
+    position: relative;
     font-size: 2rem;
   }
+  .nav__link::before {
+    position: absolute;
+    content: "";
+    border-top: 2px solid #eaab54;
+    border-left: 2px solid #eaab54;
+    width: 8px;
+    height: 8px;
+    left: -5%;
+    top: 0%;
+    opacity: 0;
+    transition: all 250ms ease;
+  }
+  .nav__link::after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #eaab54;
+    border-right: 2px solid #eaab54;
+    width: 8px;
+    height: 8px;
+    right: -5%;
+    bottom: 0%;
+    opacity: 0;
+    transition: all 250ms ease;
+  }
+}
+.nav__link:hover::before, .nav__link:hover:after {
+  opacity: 1;
+  transform: scale(1.6);
 }
 .nav__right {
   display: none;
@@ -416,6 +445,11 @@ h2 {
   border: none;
   border-radius: 0.5rem;
   background-color: #fbfcff;
+  border: 1px solid transparent;
+}
+.form__input:focus {
+  outline: none;
+  border: 1px solid #000;
 }
 .form__input::-moz-placeholder {
   color: #000;
@@ -461,6 +495,7 @@ h2 {
   border-radius: 0.5rem;
   color: #fbfcff;
   font-weight: 700;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .form__submit {
@@ -518,6 +553,21 @@ h2 {
 .footer__link {
   text-decoration: none;
   color: #000;
+  position: relative;
+}
+.footer__link::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #ea5772;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 250ms ease;
+}
+.footer__link:hover::before {
+  transform: scaleX(1);
 }
 @media (min-width: 768px) {
   .footer__link {
@@ -529,10 +579,15 @@ h2 {
     font-size: 2rem;
   }
 }
+.footer__link-c {
+  font-size: 1.2rem;
+  margin-right: 0.2rem;
+}
 .footer__contact {
   display: flex;
   align-items: center;
   gap: 2rem;
+  cursor: pointer;
 }
 .footer__text {
   color: #6a6967;
@@ -549,5 +604,19 @@ h2 {
 @media (min-width: 1024px) {
   .footer__span {
     font-size: 2rem;
+  }
+}
+.footer__attribution {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .footer__attribution {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    font-size: 1.2rem;
+    padding: 2rem;
+    text-align: center;
   }
 }/*# sourceMappingURL=app.css.map */
