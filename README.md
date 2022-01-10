@@ -17,7 +17,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://www.codewell.cc/challenges/meeet-waitlist-template--60e05defa383e41090a3c273/solution/61db4e056da8ba3fac6b0141)
+- Solution URL: [Solution URL](hhttps://www.codewell.cc/challenges/hosterr-waitlist-page--60b3ea4c0cc72310b5a2494d/solution/61dbb5bd6da8ba3fac6b0155)
 - Live Site URL: [Live Site URL](https://codewell-hosterr-waitlist-page-challenge.netlify.app/)
 
 ### Built with
